@@ -1,8 +1,4 @@
-Here is a README-style description for your **Python Log Analyzer** project, written in the same style as the AI Podcast example but adapted to your tech stack and folder structure. 
 
-You can paste this into your `README.md` and adjust any wording you want.
-
-***
 
 # 🧾 Python Log Analyzer – Web-based Log Analysis System
 
