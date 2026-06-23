@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log Analyzer</title>
+</head>
+<body>
+    <h1>Log Analyzer</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label>Select log file:</label>
+        <input type="file" name="logfile" required>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+        <h2>Result</h2>
+        <p>Total lines: {{ result.total_lines }}</p>
+        <p>Error lines: {{ result.error_count }}</p>
+        <p>Warning lines: {{ result.warning_count }}</p>
+
+        {% if result.first_error %}
+            <h3>First error line</h3>
+            <pre>{{ result.first_error }}</pre>
+        {% endif %}
+    {% endif %}
+</body>
+</html>

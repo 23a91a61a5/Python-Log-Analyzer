@@ -1,0 +1,21 @@
+body{
+background:#121212;
+color:white;
+font-family:Arial;
+text-align:center;
+padding:50px;
+}
+
+.container{
+width:600px;
+margin:auto;
+}
+
+button{
+padding:10px 20px;
+cursor:pointer;
+}
+
+#result{
+margin-top:20px;
+}
