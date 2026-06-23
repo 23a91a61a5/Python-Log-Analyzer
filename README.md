@@ -205,5 +205,3 @@ Final Year / Internship Project
 Built using Python, Django, Flask, and full-stack web technologies for practical log analysis.
 
 ***
-
-If you tell me exactly how your analyzer works (what stats it computes), I can further customize the Features and Testing sections to perfectly match your implementation.
