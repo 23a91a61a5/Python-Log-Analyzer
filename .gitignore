@@ -1,8 +1,0 @@
-__pycache__/
-*.pyc
-
-report.csv
-report.txt
-report_chart.png
-
-.env
