@@ -31,13 +31,12 @@ def parse_logs(raw_text):
 
 # Function to count total logs and each log level
 def generate_report(logs):
-
     # Initialize report with counters
     report = {
         "total_logs": len(logs),  # total number of valid log entries
-        "INFO": 0,               # count of INFO logs
-        "WARNING": 0,            # count of WARNING logs
-        "ERROR": 0               # count of ERROR logs
+        "INFO": 0,                # count of INFO logs
+        "WARNING": 0,             # count of WARNING logs
+        "ERROR": 0                # count of ERROR logs
     }
 
     # Loop through each parsed log entry
@@ -52,3 +51,24 @@ def generate_report(logs):
 
     # Return final summary report
     return report
+
+
+# NEW: function to analyze a log file and return stats for the UI
+def analyze_log_file(file_path):
+    # Read the whole file
+    with open(file_path, "r", errors="ignore") as f:
+        raw_text = f.read()
+
+    # Use your existing logic
+    logs = parse_logs(raw_text)
+    report = generate_report(logs)
+
+    # Map report to names that are easy to show on the page
+    return {
+        "total_lines": report["total_logs"],
+        "info_count": report["INFO"],
+        "warning_count": report["WARNING"],
+        "error_count": report["ERROR"],
+        # You can extend this later (e.g., most_common_error)
+        "most_common_error": "Not calculated",  # placeholder
+    }
